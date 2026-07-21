@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Calculators</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap"
+        rel="stylesheet" />
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+    <!-- ====== NAVBAR (fixed) ====== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <i class="fas fa-calculator"></i>
+                <span>Smart Calculators</span>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#tools"><i class="fas fa-tools"></i> Tools</a></li>
+                <li><a href="#features"><i class="fas fa-star"></i> Features</a></li>
+                <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ====== MAIN CONTENT ====== -->
+    <main>
+
+        <!-- HOME -->
+        <section class="section" id="home">
+            <div class="container">
+                <div class="hero">
+                    <div class="hero-badge"><i class="fas fa-bolt"></i> 8+ Smart Tools</div>
+                    <h1 class="hero-title">Calculate Smarter,<br /><span>Faster &amp; Free</span></h1>
+                    <p class="hero-desc">A collection of everyday calculators — EMI, Percentage, Age, GPA, BMI,
+                        Currency, Tip, Discount. All in one place, privacy-first.</p>
+                    <div class="hero-buttons">
+                        <a href="#tools" class="btn btn-primary"><i class="fas fa-rocket"></i> Explore Tools</a>
+                        <a href="#" class="btn btn-outline" target="_blank"><i class="fas fa-user"></i> My Portfolio</a>
+                    </div>
+                    <div class="hero-stats">
+                        <span><i class="fas fa-check-circle"></i> 100% Free</span>
+                        <span><i class="fas fa-shield-alt"></i> Privacy First</span>
+                        <span><i class="fas fa-code"></i> Open Source</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TOOLS -->
+        <section class="section section-tools" id="tools">
+            <div class="container">
+                <div class="tools-header">
+                    <h2><i class="fas fa-tools"></i> All Tools</h2>
+                    <p>Click any tool to get started — everything runs in your browser.</p>
+                </div>
+                <div class="tools-grid" id="toolsGrid"></div>
+                <div class="tool-container" id="toolContainer">
+                    <!-- Initial content will be replaced by the first tool via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURES (Why Choose) -->
+        <section class="section section-features" id="features">
+            <div class="container">
+                <div class="features-header">
+                    <div class="features-badge">Why Choose Smart Calculators</div>
+                    <h2>Built by developers, <span>for developers</span></h2>
+                    <p>Everything you need, nothing you don't.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-cubes"></i></div>
+                        <h3>8+ Essential Tools</h3>
+                        <p>All the daily tools developers need, bundled in one beautiful interface.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                        <h3>Privacy First</h3>
+                        <p>Everything runs locally in your browser. No data ever leaves your machine.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+                        <h3>Lightning Fast</h3>
+                        <p>Instant results with zero loading. No server round-trips needed.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-moon"></i></div>
+                        <h3>Dark &amp; Light Mode</h3>
+                        <p>Beautiful themes that adapt to your preference automatically.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h3>Fully Responsive</h3>
+                        <p>Works perfectly on desktop, tablet, and mobile devices.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-code-branch"></i></div>
+                        <h3>Open Source</h3>
+                        <p>Free and open source forever. Star us on GitHub.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="section section-about" id="about">
+            <div class="container">
+                <div class="about-content">
+                    <h2><i class="fas fa-info-circle"></i> About Smart Calculators</h2>
+                    <p class="about-sub">A passion project to make everyday calculations effortless.</p>
+                    <div class="about-grid">
+                        <div class="about-card">
+                            <i class="fas fa-gem"></i>
+                            <h3>Built with ❤️</h3>
+                            <p>A collection of practical, everyday calculators designed to make your life easier. No
+                                ads, no tracking — just pure utility.</p>
+                        </div>
+                        <div class="about-card">
+                            <i class="fas fa-lock"></i>
+                            <h3>Privacy First</h3>
+                            <p>All calculations run locally in your browser. We don't store, share, or even see your
+                                data. Your numbers stay yours.</p>
+                        </div>
+                        <div class="about-card">
+                            <i class="fas fa-infinity"></i>
+                            <h3>Free Forever</h3>
+                            <p>No subscriptions, no paywalls. These tools are and will always be completely free for
+                                everyone, everywhere.</p>
+                        </div>
+                        <div class="about-card">
+                            <i class="fas fa-code-branch"></i>
+                            <h3>Open &amp; Extensible</h3>
+                            <p>The code is modular — adding a new tool is as simple as dropping a new JS function into
+                                the <code>tools/</code> file.</p>
+                        </div>
+                    </div>
+                    <!-- New: Built with section -->
+                    <div class="tech-stack">
+                        <h4>Built with</h4>
+                        <div class="tech-icons">
+                            <span><i class="fab fa-html5"></i> HTML5</span>
+                            <span><i class="fab fa-css3-alt"></i> CSS3</span>
+                            <span><i class="fab fa-js"></i> JavaScript</span>
+                        </div>
+                        <h4 class="BO">Best Options</h4>
+                    </div>
+
+                    <div class="about-contact">
+                        <h3>Let's Connect</h3>
+                        <div class="contact-links">
+                            <a href="https://github.com/gunjan9711" target="_blank" class="contact-link github"><i
+                                    class="fab fa-github"></i> GitHub</a>
+                            <a href="https://www.linkedin.com/in/gunjan-mishra-325b87410" target="_blank"
+                                class="contact-link linkedin"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                            <!-- <a href="https://www.instagram.com/" target="_blank"
+                                class="contact-link instagram"><i class="fab fa-instagram"></i> Instagram</a> -->
+                        </div>
+                        <div class="contact-email">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:gm072775@gmail.com">gm072775@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <i class="fas fa-calculator"></i>
+                    <span>Smart Calculators</span>
+                    <p>Smart tools for everyday life.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#tools">Tools</a>
+                    <a href="#features">Features</a>
+                    <a href="#about">About</a>
+                </div>
+                <div class="footer-copy">&copy; 2026 Smart Calculators. Built with <i class="fas fa-heart"></i> by Gunjan Mishra.</div>
+            </div>
+        </div>
+        <button class="back-top" id="backTop" aria-label="Back to top">
+            <i class="fas fa-chevron-up"></i>
+        </button>
+    </footer>
+
+    <!-- ====== SCRIPTS ====== -->
+    <script src="js/main.js"></script>
+    <script src="js/tools.js"></script>
+
+</body>
+
+</html>
