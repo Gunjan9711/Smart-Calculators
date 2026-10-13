@@ -42,6 +42,41 @@
       const resultVal = container.querySelector('#emi-value');
       const tableWrap = container.querySelector('#emi-table-wrap');
 
+      // function calculate() {
+      //   const P = parseFloat(document.getElementById('emi-amount').value) || 0;
+      //   const r = (parseFloat(document.getElementById('emi-rate').value) || 0) / 12 / 100;
+      //   const n = parseInt(document.getElementById('emi-tenure').value) || 0;
+
+      //   if (P <= 0 || r < 0 || n <= 0) {
+      //     resultVal.textContent = '0';
+      //     tableWrap.innerHTML = '<p>Please enter valid numbers.</p>';
+      //     return;
+      //   }
+
+      //   const emi = P * r * Math.pow(1 + r, n) / (Math.pow(1 + r, n) - 1);
+      //   const totalPayment = emi * n;
+      //   const totalInterest = totalPayment - P;
+
+      //   resultVal.textContent = emi.toFixed(2);
+
+      //   let tableHtml = `<h5>Amortization Schedule</h5><table>
+      //     <thead><tr><th>Month</th><th>Principal</th><th>Interest</th><th>Balance</th></tr></thead><tbody>`;
+      //   let balance = P;
+      //   const maxRows = Math.min(n, 60);
+      //   for (let i = 1; i <= maxRows; i++) {
+      //     const interest = balance * r;
+      //     const principal = emi - interest;
+      //     balance -= principal;
+      //     if (balance < 0) balance = 0;
+      //     tableHtml += `<tr><td>${i}</td><td>${principal.toFixed(2)}</td><td>${interest.toFixed(2)}</td><td>${balance.toFixed(2)}</td></tr>`;
+      //   }
+      //   if (n > 60) tableHtml += `<tr><td colspan="4">... (showing first 60 months)</td></tr>`;
+      //   tableHtml += `</tbody></table>`;
+      //   tableHtml += `<p><strong>Total Interest:</strong> ₹${totalInterest.toFixed(2)} | <strong>Total Payment:</strong> ₹${totalPayment.toFixed(2)}</p>`;
+      //   tableWrap.innerHTML = tableHtml;
+      // }
+
+      
       function calculate() {
         const P = parseFloat(document.getElementById('emi-amount').value) || 0;
         const r = (parseFloat(document.getElementById('emi-rate').value) || 0) / 12 / 100;
@@ -53,7 +88,7 @@
           return;
         }
 
-        const emi = P * r * Math.pow(1 + r, n) / (Math.pow(1 + r, n) - 1);
+        const emi = r === 0 ? P / n : P * r * Math.pow(1 + r, n) / (Math.pow(1 + r, n) - 1);
         const totalPayment = emi * n;
         const totalInterest = totalPayment - P;
 
