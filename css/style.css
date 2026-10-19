@@ -359,6 +359,8 @@ a {
   transition:
     background var(--transition),
     border var(--transition);
+  scroll-margin-top: 5rem;
+
 }
 
 .tool-placeholder {
