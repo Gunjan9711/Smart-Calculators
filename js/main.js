@@ -113,6 +113,9 @@
       card.addEventListener('click', () => {
         const id = card.dataset.toolId;
         if (id) loadTool(id);
+        setTimeout(() => {
+                toolContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 100); // 100ms ka delay taaki naya tool render ho jaye
         // highlight active card
         toolsGrid.querySelectorAll('.tool-card').forEach(c => c.classList.remove('active'));
         card.classList.add('active');
